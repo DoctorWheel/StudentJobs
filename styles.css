@@ -1,9 +1,11 @@
-body,h1,h2 {
+body {
   margin: 0;
+  background-color: #E7E6E1;
 }
 
 h1,h2 {
   font-family: 'Merriweather';
+  margin: 0;
 }
 
 p,button,span {
@@ -362,4 +364,66 @@ p,button,span {
 .forgotPassword:visited {
     text-decoration: none;
     color: black;
+}
+
+.imagebanner{
+  height: 12.5vw;
+  position: relative;
+}
+
+.imagebanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+}
+
+.textbanner {
+  background-color: #F2A154;
+  color: white;
+}
+
+.textbanner h1{
+  margin-right: 15vw;
+  margin-left: 15vw;
+  padding: 10px;
+}
+
+.contenttext {
+  margin-top: 40px;
+  margin-bottom: 40px;;
+  margin-right: 20vw;
+  margin-left: 20vw;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.contenttext h2 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.5vw;
+}
+
+.infocontainer {
+  display: flex;
+  align-items: center;
+}
+
+.lefttext {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  flex-basis: 60%;
+  font-size: 1vw;
+}
+
+.rightimage {
+  flex-direction: column; /* Stacks the images vertically */
+  flex-basis: 40%;
+  padding: 20px;
+  margin-left: 10px;
+}
+
+.rightimage img {
+  width: 100%; /* Adjust the width of the images as needed */
 }

@@ -5,18 +5,21 @@ window.onload = function() {
             document.getElementById('btnLogout').style.display = 'none';
             document.getElementById('btnSignUp').style.display = 'block';
             document.getElementById('btnLogin').style.display = 'block';
+            document.getElementById('btnSignUp2').style.display = 'block';
         } else if (userType === 'student') {
             document.getElementById('btnAccount1').style.display = 'block';
             document.getElementById('btnAccount2').style.display = 'none';
             document.getElementById('btnLogout').style.display = 'block';
             document.getElementById('btnSignUp').style.display = 'none';
             document.getElementById('btnLogin').style.display = 'none';
+            document.getElementById('btnSignUp2').style.display = 'none';
         } else if (userType === 'employer') {
             document.getElementById('btnAccount1').style.display = 'none';
             document.getElementById('btnAccount2').style.display = 'block';
             document.getElementById('btnLogout').style.display = 'block';
             document.getElementById('btnSignUp').style.display = 'none';
             document.getElementById('btnLogin').style.display = 'none';
+            document.getElementById('btnSignUp2').style.display = 'none';
         }
     };
 
@@ -37,6 +40,10 @@ document.getElementById('btnSignUp').addEventListener('click', function() {
     document.getElementById('signUpOverlay').style.display = 'block';
 });
 
+document.getElementById('btnSignUp2').addEventListener('click', function() {
+    document.getElementById('signUpOverlay').style.display = 'block';
+});
+
 var closeButtons = document.getElementsByClassName('close-button');
 for (var i = 0; i < closeButtons.length; i++) {
     closeButtons[i].addEventListener('click', function() {
@@ -44,7 +51,6 @@ for (var i = 0; i < closeButtons.length; i++) {
         overlay.style.display = 'none';
         document.getElementById('loginerror').style.display = 'none';
 
-        // Reset visibility of Sign Up elements
         if (overlay.id === 'signUpOverlay') {
             document.getElementById('signUpForm').style.display = 'block';
             document.getElementById('employerForm').style.display = 'none';
@@ -53,7 +59,6 @@ for (var i = 0; i < closeButtons.length; i++) {
     });
 }
 
-// Change between different forms in the sign up overlay
 document.getElementById('signUpEmployer').addEventListener('click', function() {
     document.getElementById('signUpForm').style.display = 'none';
     document.getElementById('employerForm').style.display = 'block';
@@ -74,13 +79,11 @@ document.getElementById('gotoStudentFromEmployer').addEventListener('click', fun
     document.getElementById('studentForm').style.display = 'block';
 });
 
-// Change between login and sign up overlay
 document.getElementById('noAccount').addEventListener('click', function() {
     document.getElementById('loginOverlay').style.display = 'none';
     document.getElementById('signUpOverlay').style.display = 'block';
     document.getElementById('loginerror').style.display = 'none';
 
-    // Reset visibility of Sign Up elements
     document.getElementById('signUpForm').style.display = 'block';
     document.getElementById('employerForm').style.display = 'none';
     document.getElementById('studentForm').style.display = 'none';
@@ -94,7 +97,6 @@ for (var i = 0; i < loginFromSignUpButtons.length; i++) {
         document.getElementById('loginOverlay').style.display = 'block';
         document.getElementById('loginerror').style.display = 'none';
 
-        // Reset visibility of Sign Up elements
         document.getElementById('signUpForm').style.display = 'block';
         document.getElementById('employerForm').style.display = 'none';
         document.getElementById('studentForm').style.display = 'none';
@@ -105,13 +107,12 @@ for (var i = 0; i < loginFromSignUpButtons.length; i++) {
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     
-    var submitlogin = "login.php"; // Replace with your PHP file name
+    var submitlogin = "login.php";
 
-    // Update the form's action
     this.action = submitlogin;
     this.method = "POST";
 
-    // Execute form submission
+
     this.submit();
     
     console.log('Login Form Submitted');
@@ -119,14 +120,12 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
 
 document.getElementById('employerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    // Get the form action
-    var submitemployer = "signup.php"; // Replace with your PHP file name
 
-    // Update the form's action
+    var submitemployer = "signup.php";
+
     this.action = submitemployer;
     this.method = "POST";
 
-    // Execute form submission
     this.submit();
     
     console.log('Employer Form Submitted');
@@ -134,14 +133,12 @@ document.getElementById('employerForm').addEventListener('submit', function(e) {
 
 document.getElementById('studentForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    // Get the form action
-    var submitstudent = "signup.php"; // Replace with your PHP file name
 
-    // Update the form's action
+    var submitstudent = "signup.php";
+
     this.action = submitstudent;
     this.method = "POST";
 
-    // Execute form submission
     this.submit();
     
     console.log('Student Form Submitted');
@@ -154,7 +151,6 @@ for (var i = 0; i < overlays.length; i++) {
             this.style.display = 'none';
             document.getElementById('loginerror').style.display = 'none';
 
-            // Reset visibility of Sign Up elements
             if (this.id === 'signUpOverlay') {
                 document.getElementById('signUpForm').style.display = 'block';
                 document.getElementById('employerForm').style.display = 'none';

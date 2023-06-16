@@ -42,8 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $message = "Invalid email or password";
-    header("Location: index.php?login=incorrect");
-    exit();
+    header("Location: " . $_SERVER['HTTP_REFERER'] . "?login=incorrect");
+    exit;
 }
 ?>
 

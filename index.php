@@ -14,7 +14,7 @@ if (isset($_SESSION["user_type"])) {
 <html>
 <head>
 <meta charset="utf-8">
-<title>StudentJobs</title>
+<title>StudentJobs | HOME</title>
 <link rel="icon" type="image/ico" href="favicon.ico">
 <link rel="stylesheet" type="text/css" href="styles.css">
 <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
@@ -49,8 +49,8 @@ if (isset($_SESSION["user_type"])) {
                 <h1 class="introtitle">Your Dream Job is Waiting for <span style="color: white">You</span>!</h1>
                 <p class="intropg">At StudentJobs we kickstart your career!</p>
                     <div class="introbutton-container">
-                        <button class="introbutton introbutton-1">About us</button>
-                        <button class="introbutton introbutton-2">Sign up</button>
+                        <button class="introbutton introbutton-1" onclick="location.href='about.php';" style="cursor: pointer;">About us</button>
+                        <button id="btnSignUp2" class="introbutton introbutton-2">Sign up</button>
                     </div>
           </div>
           <div class="introimg">
@@ -81,7 +81,7 @@ if (isset($_SESSION["user_type"])) {
                 <h1 class="intro2title">Hire the Best Candidates</h1>
                 <p class="intro2pg">Discover StudentJobs for Employers.</p>
                     <div class="intro2button-container">
-                        <button class="intro2button intro2button-1">Get started</button>
+                        <button class="intro2button intro2button-1" onclick="location.href='partners.php';" style="cursor: pointer;">Get started</button>
                     </div>
           </div>
           <div class="intro2img">
@@ -105,7 +105,7 @@ if (isset($_SESSION["user_type"])) {
                 <input type="password" name="password" id="loginPassword" placeholder="Password" required>
                 <p id="loginerror" style="color: red; display: none;">Incorrect credentials, please try again...</p>
                 <button type="submit" class="overlay-button">Login</button>
-                <br><p><u><i><a class="forgotPassword" href="mailto:klantenservice@studentjobs.nl?subject=Wachtwoord vergeten&amp;body=Beste StudentJobs klantenservice, ik ben mijn wachtwoord vergeten.">Forgot Password?</a></i></u></p>
+                <br><p><u><i><a class="forgotPassword" href="mailto:customercare@studentjobs.nl?subject=Forgot password&amp;body=Hi StudentJobs Service, I lost my password.">Forgot Password?</a></i></u></p>
                 <p><u><i><a id="noAccount">Don't have an account? Click here</a></i></u></p>
             </form>
         </div>
