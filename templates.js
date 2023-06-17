@@ -8,7 +8,7 @@ class Header extends HTMLElement {
     }
 }
 
-customElements.define('footer-template', Footer)
+customElements.define('header-template', Header)
 
 class Footer extends HTMLElement {
     constructor() {
