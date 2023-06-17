@@ -8,4 +8,16 @@ class Header extends HTMLElement {
     }
 }
 
-customElements.define('header-template', Header)
+customElements.define('footer-template', Footer)
+
+class Footer extends HTMLElement {
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.innerHTML = '<div class="footer"><p style="text-align: center;">© 2023 StudentJobs</p></div>';
+    }
+}
+
+customElements.define('footer-template', Footer)
