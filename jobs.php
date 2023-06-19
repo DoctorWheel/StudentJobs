@@ -7,7 +7,10 @@
     <script src="templates.js"></script>
 </head>
 <body>
-    <header-template></header-template>
-    Jobs
+    <div class="page">
+        <header-template></header-template>
+        Jobs
+        footer-template
+    </div>
 </body>
 </html>

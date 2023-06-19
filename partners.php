@@ -7,7 +7,10 @@
     <script src="templates.js"></script>
 </head>
 <body>
-    <header-template></header-template>
-    Partners
+    <div class="page">
+        <header-template></header-template>
+        Partners
+        <footer-template></footer-template>
+    </div>
 </body>
 </html>
