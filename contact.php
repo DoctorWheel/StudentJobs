@@ -16,15 +16,15 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['message'])
 	// If there are no errors
 	if (!$responses) {
 		// Where to send the mail? It should be your email address
-		$to   = 'email van degene die test';
+		$to   = $_POST['email'];
 		// Send mail from which email address?
-		$from = 'ik weet niet welk email adress de server heeft.';
+		$from = 'noreply@studentjobs.nl';
 		// Mail subject
 		$subject = $_POST['subject'];
 		// Mail message
 		$message = $_POST['message'];
 		// Mail headers
-		$headers = 'From: ' . $from . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
+		$headers = 'From: ' . $from . "\r\n" . 'Cc: iljanemo@gmail.com' . "\r\n" . 'Reply-To: ' . $_POST['email'] . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 		// Try to send the mail
 		if (mail($to, $subject, $message, $headers)) {
 			// Success
