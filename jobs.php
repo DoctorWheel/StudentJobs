@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION["user_type"])) {
+    $userType = $_SESSION["user_type"];
+    // Set variable
+    echo "<script>var userType = '$userType';</script>";
+} else {
+    echo "<script>var userType = undefined;</script>";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,5 +25,8 @@
         Jobs
         <footer-template></footer-template>
     </div>
+
+    <account-overlays-template></account-overlays-template>
+    
 </body>
 </html>

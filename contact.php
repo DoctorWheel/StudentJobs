@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+if (isset($_SESSION["user_type"])) {
+    $userType = $_SESSION["user_type"];
+    // Set variable
+    echo "<script>var userType = '$userType';</script>";
+} else {
+    echo "<script>var userType = undefined;</script>";
+}
+?>
+
 <!-- Includes code from codeshack.io -->
 
 <?php
@@ -69,5 +81,8 @@ if (isset($_POST['email'], $_POST['subject'], $_POST['name'], $_POST['message'])
         </div>
         <footer-template></footer-template>
     </div>
+
+	<account-overlays-template></account-overlays-template>
+	
 </body>
 </html>
