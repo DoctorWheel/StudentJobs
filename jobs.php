@@ -15,9 +15,12 @@ if (isset($_SESSION["user_type"])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>StudentJobs | JOBS</title>
     <script src="templates.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
 </head>
 <body>
     <div class="page">
@@ -27,6 +30,6 @@ if (isset($_SESSION["user_type"])) {
     </div>
 
     <account-overlays-template></account-overlays-template>
-    
+
 </body>
 </html>
